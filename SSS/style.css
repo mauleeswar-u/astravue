@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.site-header {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 2%;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.header-left {
+  flex-basis: 20%;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.header-center {
+  flex-basis: 40%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.cta-buttons a {
+  padding: 8px 16px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  transition: background 0.3s;
+}
+
+.cta-buttons a:hover {
+  background: #0056b3;
+}
+
+
+.header-right {
+  flex-basis: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-left, .header-center, .header-right {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+  }
+
+  .header-right {
+    justify-content: flex-start;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cta-buttons {
+    justify-content: flex-start;
+  }
+}
